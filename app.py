@@ -136,7 +136,7 @@ def index():
 
 
 #  Venues
-#  ----------------------------------------------------------------
+
 
 @app.route('/venues')
 def venues():
@@ -264,7 +264,6 @@ def show_venue(venue_id):
     return render_template('pages/show_venue.html', venue=data)
 
 #  Create Venue
-#  ----------------------------------------------------------------
 
 
 @app.route('/venues/create', methods=['GET'])
@@ -360,7 +359,7 @@ def delete_venue(venue_id):
 
 
 #  Artists
-#  ----------------------------------------------------------------
+
 @app.route('/artists')
 def artists():
     artists = Artist.query.order_by(Artist.name).all()
